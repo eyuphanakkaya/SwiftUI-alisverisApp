@@ -7,18 +7,28 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A4D75C9A2A56D1540046CE00 /* alisveriAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D75C992A56D1540046CE00 /* alisveriAppApp.swift */; };
+		A4D75C9A2A56D1540046CE00 /* alisveriApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D75C992A56D1540046CE00 /* alisveriApp.swift */; };
 		A4D75C9C2A56D1540046CE00 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D75C9B2A56D1540046CE00 /* ContentView.swift */; };
 		A4D75C9E2A56D1550046CE00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4D75C9D2A56D1550046CE00 /* Assets.xcassets */; };
 		A4D75CA12A56D1550046CE00 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4D75CA02A56D1550046CE00 /* Preview Assets.xcassets */; };
+		A4D75CA82A56DB2C0046CE00 /* BirinciViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D75CA72A56DB2C0046CE00 /* BirinciViewController.swift */; };
+		A4D75CAF2A56DB800046CE00 /* IkinciViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D75CAE2A56DB800046CE00 /* IkinciViewController.swift */; };
+		A4D75CB22A56DBA20046CE00 /* UcuncuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D75CB12A56DBA20046CE00 /* UcuncuViewController.swift */; };
+		A4D75CB42A56E1580046CE00 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D75CB32A56E1580046CE00 /* Products.swift */; };
+		A4D75CB62A56E1920046CE00 /* ProductsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D75CB52A56E1920046CE00 /* ProductsDetail.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A4D75C962A56D1540046CE00 /* alisveriApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alisveriApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A4D75C992A56D1540046CE00 /* alisveriAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alisveriAppApp.swift; sourceTree = "<group>"; };
+		A4D75C992A56D1540046CE00 /* alisveriApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alisveriApp.swift; sourceTree = "<group>"; };
 		A4D75C9B2A56D1540046CE00 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A4D75C9D2A56D1550046CE00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4D75CA02A56D1550046CE00 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A4D75CA72A56DB2C0046CE00 /* BirinciViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirinciViewController.swift; sourceTree = "<group>"; };
+		A4D75CAE2A56DB800046CE00 /* IkinciViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IkinciViewController.swift; sourceTree = "<group>"; };
+		A4D75CB12A56DBA20046CE00 /* UcuncuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UcuncuViewController.swift; sourceTree = "<group>"; };
+		A4D75CB32A56E1580046CE00 /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
+		A4D75CB52A56E1920046CE00 /* ProductsDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDetail.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +61,15 @@
 		A4D75C982A56D1540046CE00 /* alisveriApp */ = {
 			isa = PBXGroup;
 			children = (
-				A4D75C992A56D1540046CE00 /* alisveriAppApp.swift */,
+				A4D75CAC2A56DB510046CE00 /* Helper */,
+				A4D75CA92A56DB320046CE00 /* Model */,
+				A4D75CAA2A56DB370046CE00 /* View */,
+				A4D75CAB2A56DB3C0046CE00 /* ViewModel */,
+				A4D75C992A56D1540046CE00 /* alisveriApp.swift */,
 				A4D75C9B2A56D1540046CE00 /* ContentView.swift */,
-				A4D75C9D2A56D1550046CE00 /* Assets.xcassets */,
+				A4D75CA72A56DB2C0046CE00 /* BirinciViewController.swift */,
+				A4D75CAE2A56DB800046CE00 /* IkinciViewController.swift */,
+				A4D75CB12A56DBA20046CE00 /* UcuncuViewController.swift */,
 				A4D75C9F2A56D1550046CE00 /* Preview Content */,
 			);
 			path = alisveriApp;
@@ -65,6 +81,37 @@
 				A4D75CA02A56D1550046CE00 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A4D75CA92A56DB320046CE00 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A4D75CB32A56E1580046CE00 /* Products.swift */,
+				A4D75CB52A56E1920046CE00 /* ProductsDetail.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A4D75CAA2A56DB370046CE00 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A4D75CAB2A56DB3C0046CE00 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		A4D75CAC2A56DB510046CE00 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				A4D75C9D2A56D1550046CE00 /* Assets.xcassets */,
+			);
+			path = Helper;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +184,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4D75CB22A56DBA20046CE00 /* UcuncuViewController.swift in Sources */,
+				A4D75CB62A56E1920046CE00 /* ProductsDetail.swift in Sources */,
 				A4D75C9C2A56D1540046CE00 /* ContentView.swift in Sources */,
-				A4D75C9A2A56D1540046CE00 /* alisveriAppApp.swift in Sources */,
+				A4D75C9A2A56D1540046CE00 /* alisveriApp.swift in Sources */,
+				A4D75CB42A56E1580046CE00 /* Products.swift in Sources */,
+				A4D75CA82A56DB2C0046CE00 /* BirinciViewController.swift in Sources */,
+				A4D75CAF2A56DB800046CE00 /* IkinciViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

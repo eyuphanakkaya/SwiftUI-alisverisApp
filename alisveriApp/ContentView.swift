@@ -8,14 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
-    var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+    var body: some View { 
+            TabView {
+                BirinciViewController()
+                    .tabItem {
+                        Image(systemName: "house")
+                        Text("Ana Sayfa")
+                    }
+                IkinciViewController()
+                    .tabItem {
+                        Image(systemName: "heart")
+                        Text("Favoriler")
+                    }
+                UcuncuViewController()
+                    .tabItem {
+                        Image(systemName: "gear")
+                        Text("Ayarlar")
+                    }
+            }
+            .accentColor(.black)
+
     }
 }
 
