@@ -13,14 +13,17 @@ struct Products: Identifiable {
     var name: String?
     var price: Int?
     var image: String?
+    var numberOfColor: String?
+    
     
     init() {
     }
     
-    init(id: Int, name: String, price: Int,image: String) {
+    init(id: Int, name: String, price: Int,image: String,numberOfColor: String) {
         self.id = id
         self.name = name
         self.price = price
         self.image = image
+        self.numberOfColor = numberOfColor
     }
 }

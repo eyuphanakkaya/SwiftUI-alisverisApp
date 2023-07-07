@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A40F077E2A57E6F30055BF95 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40F077D2A57E6F30055BF95 /* ProductDetailViewController.swift */; };
 		A4D75C9A2A56D1540046CE00 /* alisveriApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D75C992A56D1540046CE00 /* alisveriApp.swift */; };
 		A4D75C9C2A56D1540046CE00 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D75C9B2A56D1540046CE00 /* ContentView.swift */; };
 		A4D75C9E2A56D1550046CE00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4D75C9D2A56D1550046CE00 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A40F077D2A57E6F30055BF95 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		A4D75C962A56D1540046CE00 /* alisveriApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alisveriApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4D75C992A56D1540046CE00 /* alisveriApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alisveriApp.swift; sourceTree = "<group>"; };
 		A4D75C9B2A56D1540046CE00 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				A4D75C9B2A56D1540046CE00 /* ContentView.swift */,
 				A4D75CA72A56DB2C0046CE00 /* BirinciViewController.swift */,
 				A4D75CAE2A56DB800046CE00 /* IkinciViewController.swift */,
+				A40F077D2A57E6F30055BF95 /* ProductDetailViewController.swift */,
 				A4D75CB12A56DBA20046CE00 /* UcuncuViewController.swift */,
 				A4D75C9F2A56D1550046CE00 /* Preview Content */,
 			);
@@ -189,6 +192,7 @@
 				A4D75C9C2A56D1540046CE00 /* ContentView.swift in Sources */,
 				A4D75C9A2A56D1540046CE00 /* alisveriApp.swift in Sources */,
 				A4D75CB42A56E1580046CE00 /* Products.swift in Sources */,
+				A40F077E2A57E6F30055BF95 /* ProductDetailViewController.swift in Sources */,
 				A4D75CA82A56DB2C0046CE00 /* BirinciViewController.swift in Sources */,
 				A4D75CAF2A56DB800046CE00 /* IkinciViewController.swift in Sources */,
 			);

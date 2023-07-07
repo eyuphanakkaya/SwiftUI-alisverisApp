@@ -16,30 +16,28 @@ struct BirinciViewController: View {
             Color.yellow.edgesIgnoringSafeArea(.all)
         NavigationStack {
             ScrollView{
-                
                 LazyVGrid(columns: [GridItem(.flexible()),GridItem(.flexible())],spacing: 10) {
                     ForEach(productList){ urun in
                         Tasarim(urun: urun,genislik: 180,yukseklik: 250)
-                            .onTapGesture {
-                                print(urun.name!)
-                            }
+                      /*  NavigationLink(destination: Text("Destination"), label: {Text("Detay") })*/
+                            
                     }
                 }
             }
             
             .onAppear{
                 var liste = [Products]()
-                let p1 = Products(id: 1,name: "Nike Koşu Ayakkabı", price: 1200,image: "resim1")
-                let p2 = Products(id: 2,name: "Nike Yürüyüş Ayakkabı", price: 1300,image: "resim1")
-                let p3 = Products(id: 3,name: "Adidas Koşu Ayakkabı", price: 900,image: "resim2")
-                let p4 = Products(id: 4,name: "Puma Koşu Ayakkabı", price: 1100,image: "resim3")
-                let p5 = Products(id: 5,name: "Vans Koşu Ayakkabı", price: 1300,image: "resim2")
-                let p6 = Products(id: 6,name: "Vans Koşu Ayakkabı", price: 1300,image: "resim1")
-                let p7 = Products(id: 7,name: "Hummel Koşu Ayakkabı", price: 1500,image: "resim3")
-                let p8 = Products(id: 8,name: "Hummel Koşu Ayakkabı", price: 1500,image: "resim2")
-                let p9 = Products(id: 9,name: "Hummel Koşu Ayakkabı", price: 1500,image: "resim3")
-                let p10 = Products(id: 10,name: "Hummel Koşu Ayakkabı", price: 1500,image: "resim2")
-                let p11 = Products(id: 11,name: "Hummel Koşu Ayakkabı", price: 1500,image: "resim1")
+                let p1 = Products(id: 1,name: "Nike Koşu Ayakkabı", price: 1200,image: "resim1",numberOfColor: "5 Renk")
+                let p2 = Products(id: 2,name: "Nike Yürüyüş Ayakkabı", price: 1300,image: "resim1",numberOfColor: "5 Renk")
+                let p3 = Products(id: 3,name: "Adidas Koşu Ayakkabı", price: 900,image: "resim2",numberOfColor: "4 Renk")
+                let p4 = Products(id: 4,name: "Puma Koşu Ayakkabı", price: 1100,image: "resim3",numberOfColor: "3 Renk")
+                let p5 = Products(id: 5,name: "Vans Koşu Ayakkabı", price: 1300,image: "resim2",numberOfColor: "7 Renk")
+                let p6 = Products(id: 6,name: "Vans Koşu Ayakkabı", price: 1300,image: "resim1",numberOfColor: "6 Renk")
+                let p7 = Products(id: 7,name: "Hummel Koşu Ayakkabı", price: 1500,image: "resim3",numberOfColor: "4 Renk")
+                let p8 = Products(id: 8,name: "Hummel Koşu Ayakkabı", price: 1500,image: "resim2",numberOfColor: "3 Renk")
+                let p9 = Products(id: 9,name: "Hummel Koşu Ayakkabı", price: 1500,image: "resim3",numberOfColor: "2 Renk")
+                let p10 = Products(id: 10,name: "Hummel Koşu Ayakkabı", price: 1500,image: "resim2",numberOfColor: "6 Renk")
+                let p11 = Products(id: 11,name: "Hummel Koşu Ayakkabı", price: 1500,image: "resim1",numberOfColor: "6 Renk")
                 
                 
                 liste.append(p1)
@@ -68,24 +66,30 @@ struct BirinciViewController: View {
         var genislik = 0.0
         var yukseklik = 0.0
         var body: some View {
-            VStack(spacing: 20) {
+            
+            VStack(spacing: 15) {
 
                 Image(urun.image!)
                     .resizable()
-                    .frame(width: 100,height: 100)
+                    .scaledToFit()
+                   
                 Text(urun.name!)
-                Text("\(urun.price!)")
+                    .bold()
+                    .font(Font.custom("Helvetica", size: 15))
+                Text("\(urun.price!) TL")
+                    .font(Font.custom("Helvetica",size: 15))
+                Text(urun.numberOfColor!)
+                    .bold()
+                    .font(Font.custom("Helvetica", size: 15))
+                
                 
             }
             .frame(width: genislik,height: yukseklik)
             .background(Color.blue)
             .cornerRadius(10)
         }
+            
     }
-    private func yeniUrunler(){
-       
-    }
-    
     
 }
 
