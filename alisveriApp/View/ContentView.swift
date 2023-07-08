@@ -10,17 +10,17 @@ import SwiftUI
 struct ContentView: View {
     var body: some View { 
             TabView {
-                BirinciViewController()
+                AnaSayfa()
                     .tabItem {
                         Image(systemName: "house")
                         Text("Ana Sayfa")
                     }
-                IkinciViewController()
+                Favoriler()
                     .tabItem {
                         Image(systemName: "heart")
                         Text("Favoriler")
                     }
-                UcuncuViewController()
+                Ayarlar()
                     .tabItem {
                         Image(systemName: "gear")
                         Text("Ayarlar")

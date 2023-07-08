@@ -15,7 +15,6 @@ struct Products: Identifiable {
     var image: String?
     var numberOfColor: String?
     
-    
     init() {
     }
     

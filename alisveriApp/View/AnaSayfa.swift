@@ -7,9 +7,11 @@
 
 import SwiftUI
 
-struct BirinciViewController: View {
+struct AnaSayfa: View {
     
     @State private var productList =  [Products]()
+    @State private var durum = false
+    @State private var selectedProduct: Products?
 
     var body: some View {
         ZStack {
@@ -17,9 +19,14 @@ struct BirinciViewController: View {
         NavigationStack {
             ScrollView{
                 LazyVGrid(columns: [GridItem(.flexible()),GridItem(.flexible())],spacing: 10) {
+                    
                     ForEach(productList){ urun in
                         Tasarim(urun: urun,genislik: 180,yukseklik: 250)
-                      /*  NavigationLink(destination: Text("Destination"), label: {Text("Detay") })*/
+                            .onTapGesture {
+                                durum = true
+                                selectedProduct = urun
+                            }
+                            
                             
                     }
                 }
@@ -58,6 +65,11 @@ struct BirinciViewController: View {
         }.padding(10)
         
     }
+        .sheet(item: $selectedProduct) { urun in
+            ProductDetail(product: urun)
+        }
+        
+
     }
     
     
@@ -95,6 +107,6 @@ struct BirinciViewController: View {
 
 struct BirinciViewController_Previews: PreviewProvider {
     static var previews: some View {
-        BirinciViewController()
+        AnaSayfa()
     }
 }

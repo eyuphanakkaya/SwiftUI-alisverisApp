@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct UcuncuViewController: View {
+struct Ayarlar: View {
     var body: some View {
         Text("Bu Benim Üçüncü Sayfam")
     }
@@ -15,6 +15,6 @@ struct UcuncuViewController: View {
 
 struct UcuncuViewController_Previews: PreviewProvider {
     static var previews: some View {
-        UcuncuViewController()
+        Ayarlar()
     }
 }

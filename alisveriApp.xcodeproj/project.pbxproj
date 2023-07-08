@@ -7,30 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A40F077E2A57E6F30055BF95 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40F077D2A57E6F30055BF95 /* ProductDetailViewController.swift */; };
+		A40F077E2A57E6F30055BF95 /* ProductDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40F077D2A57E6F30055BF95 /* ProductDetail.swift */; };
 		A4D75C9A2A56D1540046CE00 /* alisveriApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D75C992A56D1540046CE00 /* alisveriApp.swift */; };
 		A4D75C9C2A56D1540046CE00 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D75C9B2A56D1540046CE00 /* ContentView.swift */; };
 		A4D75C9E2A56D1550046CE00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4D75C9D2A56D1550046CE00 /* Assets.xcassets */; };
 		A4D75CA12A56D1550046CE00 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4D75CA02A56D1550046CE00 /* Preview Assets.xcassets */; };
-		A4D75CA82A56DB2C0046CE00 /* BirinciViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D75CA72A56DB2C0046CE00 /* BirinciViewController.swift */; };
-		A4D75CAF2A56DB800046CE00 /* IkinciViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D75CAE2A56DB800046CE00 /* IkinciViewController.swift */; };
-		A4D75CB22A56DBA20046CE00 /* UcuncuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D75CB12A56DBA20046CE00 /* UcuncuViewController.swift */; };
+		A4D75CA82A56DB2C0046CE00 /* AnaSayfa.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D75CA72A56DB2C0046CE00 /* AnaSayfa.swift */; };
+		A4D75CAF2A56DB800046CE00 /* Favoriler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D75CAE2A56DB800046CE00 /* Favoriler.swift */; };
+		A4D75CB22A56DBA20046CE00 /* Ayarlar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D75CB12A56DBA20046CE00 /* Ayarlar.swift */; };
 		A4D75CB42A56E1580046CE00 /* Products.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D75CB32A56E1580046CE00 /* Products.swift */; };
 		A4D75CB62A56E1920046CE00 /* ProductsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D75CB52A56E1920046CE00 /* ProductsDetail.swift */; };
+		A4F331252A59912E0074823B /* AnasayfaViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F331242A59912E0074823B /* AnasayfaViewModel.swift */; };
+		A4F331272A5991580074823B /* FavorilerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F331262A5991580074823B /* FavorilerViewModel.swift */; };
+		A4F331292A5991660074823B /* ProductDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F331282A5991660074823B /* ProductDetailViewModel.swift */; };
+		A4F3312B2A5991700074823B /* AyarlarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F3312A2A5991700074823B /* AyarlarViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A40F077D2A57E6F30055BF95 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
+		A40F077D2A57E6F30055BF95 /* ProductDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetail.swift; sourceTree = "<group>"; };
 		A4D75C962A56D1540046CE00 /* alisveriApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alisveriApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4D75C992A56D1540046CE00 /* alisveriApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alisveriApp.swift; sourceTree = "<group>"; };
 		A4D75C9B2A56D1540046CE00 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		A4D75C9D2A56D1550046CE00 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A4D75CA02A56D1550046CE00 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		A4D75CA72A56DB2C0046CE00 /* BirinciViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BirinciViewController.swift; sourceTree = "<group>"; };
-		A4D75CAE2A56DB800046CE00 /* IkinciViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IkinciViewController.swift; sourceTree = "<group>"; };
-		A4D75CB12A56DBA20046CE00 /* UcuncuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UcuncuViewController.swift; sourceTree = "<group>"; };
+		A4D75CA72A56DB2C0046CE00 /* AnaSayfa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnaSayfa.swift; sourceTree = "<group>"; };
+		A4D75CAE2A56DB800046CE00 /* Favoriler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favoriler.swift; sourceTree = "<group>"; };
+		A4D75CB12A56DBA20046CE00 /* Ayarlar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ayarlar.swift; sourceTree = "<group>"; };
 		A4D75CB32A56E1580046CE00 /* Products.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Products.swift; sourceTree = "<group>"; };
 		A4D75CB52A56E1920046CE00 /* ProductsDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDetail.swift; sourceTree = "<group>"; };
+		A4F331242A59912E0074823B /* AnasayfaViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnasayfaViewModel.swift; sourceTree = "<group>"; };
+		A4F331262A5991580074823B /* FavorilerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavorilerViewModel.swift; sourceTree = "<group>"; };
+		A4F331282A5991660074823B /* ProductDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewModel.swift; sourceTree = "<group>"; };
+		A4F3312A2A5991700074823B /* AyarlarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AyarlarViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,11 +76,6 @@
 				A4D75CAA2A56DB370046CE00 /* View */,
 				A4D75CAB2A56DB3C0046CE00 /* ViewModel */,
 				A4D75C992A56D1540046CE00 /* alisveriApp.swift */,
-				A4D75C9B2A56D1540046CE00 /* ContentView.swift */,
-				A4D75CA72A56DB2C0046CE00 /* BirinciViewController.swift */,
-				A4D75CAE2A56DB800046CE00 /* IkinciViewController.swift */,
-				A40F077D2A57E6F30055BF95 /* ProductDetailViewController.swift */,
-				A4D75CB12A56DBA20046CE00 /* UcuncuViewController.swift */,
 				A4D75C9F2A56D1550046CE00 /* Preview Content */,
 			);
 			path = alisveriApp;
@@ -98,6 +101,11 @@
 		A4D75CAA2A56DB370046CE00 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A4D75C9B2A56D1540046CE00 /* ContentView.swift */,
+				A4D75CA72A56DB2C0046CE00 /* AnaSayfa.swift */,
+				A40F077D2A57E6F30055BF95 /* ProductDetail.swift */,
+				A4D75CAE2A56DB800046CE00 /* Favoriler.swift */,
+				A4D75CB12A56DBA20046CE00 /* Ayarlar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -105,6 +113,10 @@
 		A4D75CAB2A56DB3C0046CE00 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				A4F331242A59912E0074823B /* AnasayfaViewModel.swift */,
+				A4F331282A5991660074823B /* ProductDetailViewModel.swift */,
+				A4F331262A5991580074823B /* FavorilerViewModel.swift */,
+				A4F3312A2A5991700074823B /* AyarlarViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -187,14 +199,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A4D75CB22A56DBA20046CE00 /* UcuncuViewController.swift in Sources */,
+				A4D75CB22A56DBA20046CE00 /* Ayarlar.swift in Sources */,
 				A4D75CB62A56E1920046CE00 /* ProductsDetail.swift in Sources */,
 				A4D75C9C2A56D1540046CE00 /* ContentView.swift in Sources */,
 				A4D75C9A2A56D1540046CE00 /* alisveriApp.swift in Sources */,
 				A4D75CB42A56E1580046CE00 /* Products.swift in Sources */,
-				A40F077E2A57E6F30055BF95 /* ProductDetailViewController.swift in Sources */,
-				A4D75CA82A56DB2C0046CE00 /* BirinciViewController.swift in Sources */,
-				A4D75CAF2A56DB800046CE00 /* IkinciViewController.swift in Sources */,
+				A4F331292A5991660074823B /* ProductDetailViewModel.swift in Sources */,
+				A4F331252A59912E0074823B /* AnasayfaViewModel.swift in Sources */,
+				A40F077E2A57E6F30055BF95 /* ProductDetail.swift in Sources */,
+				A4D75CA82A56DB2C0046CE00 /* AnaSayfa.swift in Sources */,
+				A4F3312B2A5991700074823B /* AyarlarViewModel.swift in Sources */,
+				A4D75CAF2A56DB800046CE00 /* Favoriler.swift in Sources */,
+				A4F331272A5991580074823B /* FavorilerViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct IkinciViewController: View {
+struct Favoriler: View {
     var body: some View {
         Text("Bu benim ikinci sayfam")
     }
@@ -15,6 +15,6 @@ struct IkinciViewController: View {
 
 struct IkinciViewController_Previews: PreviewProvider {
     static var previews: some View {
-        IkinciViewController()
+        Favoriler()
     }
 }
