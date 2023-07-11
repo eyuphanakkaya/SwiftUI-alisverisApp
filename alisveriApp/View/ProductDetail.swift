@@ -9,50 +9,55 @@ import SwiftUI
 
 struct ProductDetail: View {
     
-    @State private var detayList = [ProductsDetail]()
-    let product: Products?
+    @State private var detayList = [Product]()
+    let product: Product?
     var body: some View {
         VStack {
             
-            ForEach(detayList){ detay in
-                if product?.id == (detay.productId){
-                    DetayTasarim(urunDetay: detay)
+            ForEach(detayList,id: \.self){ productDetail in
+                if product?.id == (productDetail.id){
+                    DetayTasarim(productDetail: productDetail)
                 }
               /*  NavigationLink(destination: Text("Destination"), label: {Text("Detay") })*/
                     
             }
         }
         .onAppear{
-            //var urun = Products()
-            let pd1 = ProductsDetail(id: 1, statment: "Nike Air Max, ikonik ve yenilikçi tasarıma sahip, topukta görünür hava yastığı bulunan bir ayakkabı serisidir. Performans ve stil açısından popülerdir.", image: (product?.image)!, price: (product?.price)!, title: (product?.name)!, productId: 1)
-            let pd2 = ProductsDetail(id: 2, statment: "Nike Air Max, ikonik ve yenilikçi tasarıma sahip, topukta görünür hava yastığı bulunan bir ayakkabı serisidir. Performans ve stil açısından popülerdir.", image: (product?.image)!, price: (product?.price)!, title: (product?.name)!, productId: 2)
-            let pd3 = ProductsDetail(id: 3, statment: "Nike Air Max, ikonik ve yenilikçi tasarıma sahip, topukta görünür hava yastığı bulunan bir ayakkabı serisidir. Performans ve stil açısından popülerdir.", image: (product?.image)!, price: (product?.price)!, title: (product?.name)!, productId: 3)
-            let pd4 = ProductsDetail(id: 4, statment: "Nike Air Max, ikonik ve yenilikçi tasarıma sahip, topukta görünür hava yastığı bulunan bir ayakkabı serisidir. Performans ve stil açısından popülerdir.", image: (product?.image)!, price: (product?.price)!, title: (product?.name)!, productId: 4)
-            
-            detayList.append(pd1)
-            detayList.append(pd2)
-            detayList.append(pd3)
-            detayList.append(pd4)
-  
+            func fetchProducts() async{
+                guard let url = URL(string: "https://api.escuelajs.co/api/v1/categories/4/products?offset=0&limit=30") else {
+                    print("Veri Çekilemedi")
+                    return}
+                do {
+                    let (data, _) =  try await URLSession.shared.data(from: url)
+                    if let decodedResponse = try? JSONDecoder().decode([Product].self,from: data) {
+                        detayList = decodedResponse
+                    }
+                } catch {
+                    print(error.localizedDescription)
+                }
+            }
             
         }
     }
 }
 struct DetayTasarim: View {
-    var urunDetay = ProductsDetail()
+    var productDetail:Product
     var body: some View {
         VStack(spacing: 20) {
-                Image(urunDetay.image!)
+            ForEach(productDetail.images,id: \.self) { image in
+                Image(image)
                     .resizable()
                     .scaledToFit()
+            }
+                
             VStack(alignment: .leading,spacing: 15) {
-                Text("Ayakkabı")
+                Text(productDetail.category.name)
                     .font(Font.custom("Helvetica", size: 20))
-                Text(urunDetay.title!)
+                Text(productDetail.title)
                     .font(Font.custom("Helvetica", size: 30))
-                Text("US$\(urunDetay.price!)")
+                Text("US$\(productDetail.price)")
                     .font(Font.custom("Helvetica", size: 20))
-                Text(urunDetay.statment!)
+                Text(productDetail.description)
                     .font(Font.custom("Helvetica", size: 20))
                 Text("View Products Details")
                     .font(Font.custom("Helvetica", size: 15))
