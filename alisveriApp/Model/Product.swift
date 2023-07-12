@@ -8,8 +8,8 @@
 import Foundation
 
 
-struct Product: Hashable,Codable{
-    var id: String
+struct Product: Hashable,Codable,Identifiable{
+    var id: Int
     var title: String
     var price: Int
     var description: String
