@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct alisveriApp: App {
+    @AppStorage("isMode") var isMode = false
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .preferredColorScheme(isMode ? .dark : .light)
         }
     }
 }

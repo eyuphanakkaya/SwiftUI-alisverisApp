@@ -12,9 +12,7 @@ struct ProductDetailDesign: View {
     var body: some View {
         VStack(spacing: 20) {
             ForEach(productDetail.images,id: \.self) { image in
-                HomePage().homeViewModel.loadImage(from: image)
-                    .resizable()
-                    .scaledToFit()
+                //HomePage().homeViewModel.loadImage(from: image)
             }
                 
             VStack(alignment: .leading,spacing: 15) {
@@ -38,6 +36,7 @@ struct ProductDetailDesign: View {
                 }
                 .frame(width: 350,height: 60)
                 .foregroundColor(.black)
+                .background(Color.white)
                 .border(.gray)
                 .cornerRadius(20)
                 
@@ -54,6 +53,20 @@ struct ProductDetailDesign: View {
                 .background(Color.black)
                 .foregroundColor(.white)
                 .cornerRadius(20)
+                
+                Button {
+                    print("Favorilere Eklendi")
+                } label: {
+                    HStack {
+                        Text("Favoriler")
+                        Image(systemName: "heart")
+                    }
+                }
+                .frame(width: 350,height: 60)
+                .background(Color.red)
+                .foregroundColor(.white)
+                .cornerRadius(20)
+
     
                 
             }

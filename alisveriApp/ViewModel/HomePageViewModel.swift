@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import Kingfisher
 
 class HomePageViewModel: ObservableObject {
     
@@ -42,4 +43,5 @@ class HomePageViewModel: ObservableObject {
         }
         return Image(uiImage: image)
     }
+    
 }

@@ -6,3 +6,18 @@
 //
 
 import Foundation
+import SwiftUI
+
+class Button{
+    func button() {
+        Button(action: {
+            print("Sepete eklendi")
+        }) {
+            HStack {
+                Text("Add Bag")
+                Image(systemName: "bag")
+            }
+                
+        }
+    }
+}

@@ -21,12 +21,12 @@ struct Category: Hashable,Codable{
     var name: String
     var image: String
 }
-
-struct Products: Identifiable {
+struct Products: Hashable,Identifiable {
     var id: Int?
     var name: String?
     var price: Int?
     var image: String?
     var numberOfColor: String?
-
 }
+
+

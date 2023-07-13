@@ -32,6 +32,7 @@ struct HomeDesign: View {
                         Text(product.title)
                             .bold()
                             .font(Font.custom("Helvetica", size: 15))
+                        
                         Text("\(product.price) $")
                             .font(Font.custom("Helvetica",size: 15))
                         Text(product.category.name)

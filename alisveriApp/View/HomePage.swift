@@ -15,7 +15,6 @@ struct HomePage: View {
 
     var body: some View {
         ZStack {
-            Color.yellow.edgesIgnoringSafeArea(.all)
         NavigationView {
             ScrollView{
                 LazyVGrid(columns: [GridItem(.flexible()),GridItem(.flexible())],spacing: 10) {

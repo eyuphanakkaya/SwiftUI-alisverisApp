@@ -9,27 +9,26 @@
 /* Begin PBXBuildFile section */
 		A40F077E2A57E6F30055BF95 /* ProductDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A40F077D2A57E6F30055BF95 /* ProductDetail.swift */; };
 		A47389802A5E9E5E00A985E6 /* HomeDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = A473897F2A5E9E5E00A985E6 /* HomeDesign.swift */; };
-		A47389832A5EA1EE00A985E6 /* ButtonComp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47389822A5EA1EE00A985E6 /* ButtonComp.swift */; };
 		A47389852A5EA21C00A985E6 /* ProductDetailDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = A47389842A5EA21C00A985E6 /* ProductDetailDesign.swift */; };
+		A4B3D98A2A601DA2004C71D7 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = A4B3D9892A601DA2004C71D7 /* Kingfisher */; };
+		A4B3D98C2A60395C004C71D7 /* ButtonCompe.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4B3D98B2A60395C004C71D7 /* ButtonCompe.swift */; };
 		A4D75C9A2A56D1540046CE00 /* alisveriApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D75C992A56D1540046CE00 /* alisveriApp.swift */; };
 		A4D75C9C2A56D1540046CE00 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D75C9B2A56D1540046CE00 /* ContentView.swift */; };
 		A4D75C9E2A56D1550046CE00 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4D75C9D2A56D1550046CE00 /* Assets.xcassets */; };
 		A4D75CA12A56D1550046CE00 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4D75CA02A56D1550046CE00 /* Preview Assets.xcassets */; };
 		A4D75CA82A56DB2C0046CE00 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D75CA72A56DB2C0046CE00 /* HomePage.swift */; };
 		A4D75CB22A56DBA20046CE00 /* Ayarlar.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D75CB12A56DBA20046CE00 /* Ayarlar.swift */; };
-		A4D75CB62A56E1920046CE00 /* ProductsDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4D75CB52A56E1920046CE00 /* ProductsDetail.swift */; };
 		A4F0C85C2A5D846C00DAE697 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F0C85B2A5D846C00DAE697 /* Product.swift */; };
 		A4F0C85E2A5D866C00DAE697 /* Favorites.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F0C85D2A5D866C00DAE697 /* Favorites.swift */; };
 		A4F331252A59912E0074823B /* HomePageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F331242A59912E0074823B /* HomePageViewModel.swift */; };
 		A4F331272A5991580074823B /* FavorilerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F331262A5991580074823B /* FavorilerViewModel.swift */; };
-		A4F3312B2A5991700074823B /* AyarlarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4F3312A2A5991700074823B /* AyarlarViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A40F077D2A57E6F30055BF95 /* ProductDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetail.swift; sourceTree = "<group>"; };
 		A473897F2A5E9E5E00A985E6 /* HomeDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeDesign.swift; sourceTree = "<group>"; };
-		A47389822A5EA1EE00A985E6 /* ButtonComp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonComp.swift; sourceTree = "<group>"; };
 		A47389842A5EA21C00A985E6 /* ProductDetailDesign.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailDesign.swift; sourceTree = "<group>"; };
+		A4B3D98B2A60395C004C71D7 /* ButtonCompe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCompe.swift; sourceTree = "<group>"; };
 		A4D75C962A56D1540046CE00 /* alisveriApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = alisveriApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4D75C992A56D1540046CE00 /* alisveriApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = alisveriApp.swift; sourceTree = "<group>"; };
 		A4D75C9B2A56D1540046CE00 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -37,12 +36,10 @@
 		A4D75CA02A56D1550046CE00 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A4D75CA72A56DB2C0046CE00 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		A4D75CB12A56DBA20046CE00 /* Ayarlar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ayarlar.swift; sourceTree = "<group>"; };
-		A4D75CB52A56E1920046CE00 /* ProductsDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsDetail.swift; sourceTree = "<group>"; };
 		A4F0C85B2A5D846C00DAE697 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		A4F0C85D2A5D866C00DAE697 /* Favorites.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorites.swift; sourceTree = "<group>"; };
 		A4F331242A59912E0074823B /* HomePageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageViewModel.swift; sourceTree = "<group>"; };
 		A4F331262A5991580074823B /* FavorilerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavorilerViewModel.swift; sourceTree = "<group>"; };
-		A4F3312A2A5991700074823B /* AyarlarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AyarlarViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A4B3D98A2A601DA2004C71D7 /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,7 +66,7 @@
 		A47389812A5EA1DB00A985E6 /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				A47389822A5EA1EE00A985E6 /* ButtonComp.swift */,
+				A4B3D98B2A60395C004C71D7 /* ButtonCompe.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -113,7 +111,6 @@
 		A4D75CA92A56DB320046CE00 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				A4D75CB52A56E1920046CE00 /* ProductsDetail.swift */,
 				A4F0C85B2A5D846C00DAE697 /* Product.swift */,
 			);
 			path = Model;
@@ -138,7 +135,6 @@
 			children = (
 				A4F331242A59912E0074823B /* HomePageViewModel.swift */,
 				A4F331262A5991580074823B /* FavorilerViewModel.swift */,
-				A4F3312A2A5991700074823B /* AyarlarViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -167,6 +163,9 @@
 			dependencies = (
 			);
 			name = alisveriApp;
+			packageProductDependencies = (
+				A4B3D9892A601DA2004C71D7 /* Kingfisher */,
+			);
 			productName = alisveriApp;
 			productReference = A4D75C962A56D1540046CE00 /* alisveriApp.app */;
 			productType = "com.apple.product-type.application";
@@ -195,6 +194,9 @@
 				Base,
 			);
 			mainGroup = A4D75C8D2A56D1540046CE00;
+			packageReferences = (
+				A4B3D9882A601DA2004C71D7 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = A4D75C972A56D1540046CE00 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -223,17 +225,15 @@
 			files = (
 				A4D75CB22A56DBA20046CE00 /* Ayarlar.swift in Sources */,
 				A47389852A5EA21C00A985E6 /* ProductDetailDesign.swift in Sources */,
-				A4D75CB62A56E1920046CE00 /* ProductsDetail.swift in Sources */,
 				A4D75C9C2A56D1540046CE00 /* ContentView.swift in Sources */,
 				A4D75C9A2A56D1540046CE00 /* alisveriApp.swift in Sources */,
 				A4F0C85C2A5D846C00DAE697 /* Product.swift in Sources */,
 				A4F331252A59912E0074823B /* HomePageViewModel.swift in Sources */,
 				A40F077E2A57E6F30055BF95 /* ProductDetail.swift in Sources */,
+				A4B3D98C2A60395C004C71D7 /* ButtonCompe.swift in Sources */,
 				A4D75CA82A56DB2C0046CE00 /* HomePage.swift in Sources */,
 				A4F0C85E2A5D866C00DAE697 /* Favorites.swift in Sources */,
-				A4F3312B2A5991700074823B /* AyarlarViewModel.swift in Sources */,
 				A4F331272A5991580074823B /* FavorilerViewModel.swift in Sources */,
-				A47389832A5EA1EE00A985E6 /* ButtonComp.swift in Sources */,
 				A47389802A5E9E5E00A985E6 /* HomeDesign.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,6 +435,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A4B3D9882A601DA2004C71D7 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A4B3D9892A601DA2004C71D7 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A4B3D9882A601DA2004C71D7 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A4D75C8E2A56D1540046CE00 /* Project object */;
 }
