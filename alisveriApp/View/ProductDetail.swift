@@ -28,8 +28,8 @@ struct ProductDetail: View {
 
 }
 
-struct ProductDetailViewController_Previews: PreviewProvider {
+/*struct ProductDetailViewController_Previews: PreviewProvider {
     static var previews: some View {
-        ProductDetail(product: nil)
+        ProductDetail(value: , product: nil)
     }
-}
+}*/

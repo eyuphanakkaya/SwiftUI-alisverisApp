@@ -4,48 +4,42 @@
 //
 //  Created by Eyüphan Akkaya on 11.07.2023.
 //
-
 import SwiftUI
 
+
 struct Favorites: View {
-    var urunList = [Products]()
+    @ObservedObject var favViewModel = FavorilerViewModel()
+    @State var viewModel = HomePageViewModel()
+    @AppStorage("favList") var favListData: Data = Data()
     var body: some View {
         NavigationView {
-            ScrollView {
+            ScrollView() {
                 LazyVGrid(columns: [GridItem(.flexible())
                     ,GridItem(.flexible())],spacing: 20) {
-                    ForEach(urunList,id: \.self) { urun in
-                        Text(urun.name!)
+                    
+                    ForEach(favViewModel.urunList,id: \.self) { urun in
+                        FavoriDesign(favProduct: urun)
+                        
                     }
+                    .padding(.vertical,120)
+                    .padding(.horizontal,-15)
+                    .offset(y: -100)
                 }
-                
+                    .padding(.horizontal)
             }
             .navigationTitle("Favoriler")
             
         }
         .onAppear{
-            var list = [Products]()
-            let u1 = Products(id: 1, name: "Nike",price: 1233,image: "resim1")
-            let u2 = Products(id: 2, name: "Nike",price: 1233,image: "resim1")
-            let u3 = Products(id: 3, name: "Nike",price: 1233,image: "resim1")
-            let u4 = Products(id: 4, name: "Nike",price: 1233,image: "resim1")
-            list.append(u1)
-            list.append(u2)
-            list.append(u3)
-            list.append(u4)
-            
-            DispatchQueue.main.async {
-                self.urunList = list
-            }
+           
         }
+
+
         
     }
+
+       
     
-}
-struct FavoriDesign: View {
-    var body: some View {
-        Text("resim")
-    }
 }
 
 

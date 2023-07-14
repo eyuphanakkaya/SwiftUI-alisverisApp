@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct HomeDesign: View {
         var product: Product?
@@ -17,7 +18,7 @@ struct HomeDesign: View {
                         TabView {
                             if let product = product {
                                 ForEach(product.images, id: \.self) { image in
-                                    HomePage().homeViewModel.loadImage(from: image)
+                                    KFImage(URL(string: image))
                                         .resizable()
                                         .scaledToFit()
                                 }
@@ -38,12 +39,13 @@ struct HomeDesign: View {
                         Text(product.category.name)
                             .bold()
                             .font(Font.custom("Helvetica", size: 15))
+                           
                     }
         
                     
                 }
                 .frame(width: geometry.size.width * 0.8,height: geometry.size.height * 25)
-                .background(Color.blue)
+                .background(Color("deneme"))
                 .cornerRadius(10)
                 .padding(.vertical,-100)
                 .padding()

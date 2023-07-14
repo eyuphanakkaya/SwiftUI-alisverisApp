@@ -6,7 +6,8 @@
 //
 
 import Foundation
+import SwiftUI
 
 class FavorilerViewModel: ObservableObject {
-    
+    @Published var urunList = [Product]()
 }

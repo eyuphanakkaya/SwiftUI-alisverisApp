@@ -32,16 +32,6 @@ class HomePageViewModel: ObservableObject {
         }
         .resume()
     }
-    func loadImage(from urlString: String) -> Image {
-        // Resmi yükleme işlemi
-        //kingfisher
-        guard let url = URL(string: urlString),
-              let data = try? Data(contentsOf: url),
-              let image = UIImage(data: data) else {
-            // Yükleme başarısız olduğunda veya placeholder resim kullanmak istediğinizde burayı güncelleyebilirsiniz.
-            return Image(systemName: "photo")
-        }
-        return Image(uiImage: image)
-    }
+   
     
 }

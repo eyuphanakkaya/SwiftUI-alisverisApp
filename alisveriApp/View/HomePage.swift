@@ -38,7 +38,7 @@ struct HomePage: View {
     }
         .edgesIgnoringSafeArea(.top)
         .sheet(item: $selectedProduct) { urun in
-           ProductDetail(product: urun)
+            ProductDetail(product: urun)
         }
         
     }

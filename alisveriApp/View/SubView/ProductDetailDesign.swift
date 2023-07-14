@@ -6,14 +6,28 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct ProductDetailDesign: View {
     var productDetail: Product
+    
+    @ObservedObject var favViewModel = FavorilerViewModel()
     var body: some View {
         VStack(spacing: 20) {
-            ForEach(productDetail.images,id: \.self) { image in
-                //HomePage().homeViewModel.loadImage(from: image)
+            VStack {
+                TabView {
+                    if let productDetails = productDetail {
+                        ForEach(productDetails.images, id: \.self) { image in
+                            KFImage(URL(string: image))
+                                .resizable()
+                                .scaledToFit()
+                        }
+                    }
+                }
+                .tabViewStyle(PageTabViewStyle())
+                .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
             }
+            .frame(width: 200,height: 200)
                 
             VStack(alignment: .leading,spacing: 15) {
                 Text(productDetail.category.name)
@@ -55,7 +69,8 @@ struct ProductDetailDesign: View {
                 .cornerRadius(20)
                 
                 Button {
-                    print("Favorilere Eklendi")
+                   favViewModel.urunList.append(productDetail)
+                    print(favViewModel.urunList.count)
                 } label: {
                     HStack {
                         Text("Favoriler")
@@ -66,6 +81,7 @@ struct ProductDetailDesign: View {
                 .background(Color.red)
                 .foregroundColor(.white)
                 .cornerRadius(20)
+                
 
     
                 
