@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Ayarlar: View {
+    @ObservedObject var homePageViewModel: HomePageViewModel
     @AppStorage("isMode") private var isMode = false
     var body: some View {
         NavigationView {
@@ -25,6 +26,6 @@ struct Ayarlar: View {
 }
 struct UcuncuViewController_Previews: PreviewProvider {
     static var previews: some View {
-            Ayarlar()
+        Ayarlar(homePageViewModel: HomePageViewModel())
     }
 }

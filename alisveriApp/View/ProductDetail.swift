@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ProductDetail: View {
-    @ObservedObject var homeViewModel = HomePageViewModel()
+    @ObservedObject var homeViewModel:  HomePageViewModel
     let product: Product?
     var body: some View {
         VStack {

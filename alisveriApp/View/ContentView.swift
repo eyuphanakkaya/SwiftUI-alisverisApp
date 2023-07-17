@@ -8,21 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var homeViewModel = HomePageViewModel()
     var body: some View { 
         ZStack {
             TabView {
-                    HomePage()
+                HomePage(homeViewModel: homeViewModel)
                         .tabItem {
                             Image(systemName: "house")
                                 .foregroundColor(.blue)
                             Text("Ana Sayfa")
                         }
-                    Favorites()
+                Favorites(homePageViewModel: homeViewModel)
                         .tabItem {
                             Image(systemName: "heart")
                             Text("Favoriler")
                         }
-                    Ayarlar()
+                Ayarlar(homePageViewModel: homeViewModel)
                         .tabItem {
                             Image(systemName: "gear")
                             Text("Ayarlar")

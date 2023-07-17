@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 import Kingfisher
-
+ 
 struct FavoriDesign: View {
 
     var favProduct: Product

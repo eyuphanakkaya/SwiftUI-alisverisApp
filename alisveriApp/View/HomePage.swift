@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct HomePage: View {
-
     @ObservedObject var homeViewModel = HomePageViewModel()
     @State private var status = false
     @State private var selectedProduct: Product?
+    @State private var showFavorites = false
+    
 
     var body: some View {
         ZStack {
@@ -28,6 +29,7 @@ struct HomePage: View {
                             .padding(.horizontal,-15)
                     }
                 }
+                .navigationTitle("Ürünler")
             }
            
             .onAppear{
@@ -35,10 +37,13 @@ struct HomePage: View {
             }
             
         }.padding(10)
+               
     }
         .edgesIgnoringSafeArea(.top)
-        .sheet(item: $selectedProduct) { urun in
-            ProductDetail(product: urun)
+        .sheet(item: $selectedProduct, onDismiss: {
+            showFavorites = true
+        }) { product in
+            ProductDetail(homeViewModel: homeViewModel, product: product)
         }
         
     }

@@ -11,7 +11,8 @@ import Kingfisher
 
 class HomePageViewModel: ObservableObject {
     
-    @Published  var productList =  [Product]()
+    @Published  var productList =  [Product]() // tüm ürünler
+    @Published  var favourites =  [Product]() // sadece favorilere eklenecek olanlar buraya
     
     
     func fetchProduct() {

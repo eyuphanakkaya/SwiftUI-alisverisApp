@@ -8,8 +8,7 @@ import SwiftUI
 
 
 struct Favorites: View {
-    @ObservedObject var favViewModel = FavorilerViewModel()
-    @State var viewModel = HomePageViewModel()
+    @ObservedObject var homePageViewModel: HomePageViewModel
     @AppStorage("favList") var favListData: Data = Data()
     var body: some View {
         NavigationView {
@@ -17,7 +16,7 @@ struct Favorites: View {
                 LazyVGrid(columns: [GridItem(.flexible())
                     ,GridItem(.flexible())],spacing: 20) {
                     
-                    ForEach(favViewModel.urunList,id: \.self) { urun in
+                    ForEach(homePageViewModel.favourites, id: \.self) { urun in
                         FavoriDesign(favProduct: urun)
                         
                     }
@@ -30,11 +29,6 @@ struct Favorites: View {
             .navigationTitle("Favoriler")
             
         }
-        .onAppear{
-           
-        }
-
-
         
     }
 
@@ -45,6 +39,6 @@ struct Favorites: View {
 
 struct IkinciViewController_Previews: PreviewProvider {
     static var previews: some View {
-        Favorites()
+        Favorites(homePageViewModel: HomePageViewModel())
     }
 }
