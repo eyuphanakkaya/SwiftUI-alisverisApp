@@ -10,9 +10,8 @@ import Kingfisher
 
 struct ProductDetailDesign: View {
     var productDetail: Product
-    
-    @State var gecisYap = false
-    @ObservedObject var homePageViewModel = HomePageViewModel()
+
+    @StateObject var homePageViewModel: HomePageViewModel
     var body: some View {
         NavigationView {
             VStack(spacing: 20) {
@@ -60,6 +59,7 @@ struct ProductDetailDesign: View {
                         print("Sepete eklendi")
                     }) {
                         HStack {
+                            
                             Text("Add Bag")
                             Image(systemName: "bag")
                         }
@@ -71,17 +71,26 @@ struct ProductDetailDesign: View {
                     .cornerRadius(20)
                     
                     Button {
-                        homePageViewModel.favourites.append(productDetail)
-                        gecisYap = true
-                        //                    print(homePageViewModel.fa)
+                            if !homePageViewModel.favourites.contains { $0.id == productDetail.id } {
+                                homePageViewModel.favourites.append(productDetail)
+                            } else {
+                                print("Bu Ürün Zaten Var")
+                                if let selectedIndex = homePageViewModel.favourites.firstIndex(of: productDetail) {
+                                    homePageViewModel.favourites.remove(at: selectedIndex)
+                                    
+                                }
+                            }
+                        
                     } label: {
                         HStack {
                             Text("Favoriler")
-                            Image(systemName: "heart")
+                            
+                            Image(systemName: homePageViewModel.favourites.contains { $0.id == productDetail.id } ? "heart.fill":"heart")
                         }
-                    }.sheet(isPresented: $gecisYap , content: {
+                    }
+                    /*.sheet(isPresented: $gecisYap , content: {
                         Favorites(homePageViewModel: homePageViewModel)
-                    })
+                    })*/
                     .frame(width: 350,height: 60)
                     .background(Color.red)
                     .foregroundColor(.white)

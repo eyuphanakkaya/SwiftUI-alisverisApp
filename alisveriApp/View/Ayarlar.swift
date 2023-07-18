@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Ayarlar: View {
-    @ObservedObject var homePageViewModel: HomePageViewModel
+    @StateObject var homePageViewModel: HomePageViewModel
     @AppStorage("isMode") private var isMode = false
     var body: some View {
         NavigationView {

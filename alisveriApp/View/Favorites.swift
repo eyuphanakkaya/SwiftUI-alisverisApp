@@ -8,7 +8,7 @@ import SwiftUI
 
 
 struct Favorites: View {
-    @ObservedObject var homePageViewModel: HomePageViewModel
+    @StateObject var homePageViewModel: HomePageViewModel
     @AppStorage("favList") var favListData: Data = Data()
     var body: some View {
         NavigationView {

@@ -8,16 +8,16 @@
 import SwiftUI
 
 struct ProductDetail: View {
-    @ObservedObject var homeViewModel:  HomePageViewModel
+    @StateObject var homeViewModel:  HomePageViewModel
     let product: Product?
     var body: some View {
         VStack {
-            
             ForEach(homeViewModel.productList,id: \.self){ productDetail in
                 
                 if product?.id == productDetail.id{
-                    ProductDetailDesign(productDetail: productDetail)
+                    ProductDetailDesign(productDetail: productDetail, homePageViewModel: homeViewModel)
                 }
+                
              
             }
         }

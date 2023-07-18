@@ -54,8 +54,6 @@ struct HomeDesign: View {
         }
             
     }
-
-
 struct HomeDesign_Previews: PreviewProvider {
     static var previews: some View {
         HomeDesign()

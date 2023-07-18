@@ -14,22 +14,34 @@ struct FavoriDesign: View {
     var favProduct: Product
     var body: some View {
         GeometryReader { geometry in
-            VStack {
-                TabView {
-                    ForEach(favProduct.images,id: \.self) { favImage in
-                         KFImage(URL(string: favImage))
-                            .resizable()
-                            .scaledToFit()
-                    }
-                }
+
                 VStack(spacing: 20) {
-                    if let name = favProduct.title,let price = favProduct.price {
-                        Text(name)
-                            .bold()
-                            .font(Font.custom("Helvetica", size: 15))
-                        Text("$\(price)")
-                            .bold()
-                            .font(Font.custom("Helvetica", size: 15))
+                    VStack {
+                        TabView {
+                            if let fav = favProduct {
+                                ForEach(fav.images, id: \.self) { image in
+                                    KFImage(URL(string: image))
+                                        .resizable()
+                                        .scaledToFit()
+                                }
+                            }
+                        }
+                        .tabViewStyle(PageTabViewStyle())
+                        .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+                    }
+                    .frame(width: 120,height: 150)
+                    VStack(spacing: 10) {
+                        if let name = favProduct.title,let price = favProduct.price,let cate = favProduct.category.name {
+                            Text(name)
+                                .bold()
+                                .font(Font.custom("Helvetica", size: 15))
+                            Text("$\(price)")
+                                .bold()
+                                .font(Font.custom("Helvetica", size: 15))
+                            Text(cate)
+                                .bold()
+                                .font(Font.custom("Helvetica", size: 15))
+                        }
                     }
                     
                 }
@@ -37,7 +49,6 @@ struct FavoriDesign: View {
                 .background(Color("deneme"))
                 .cornerRadius(10)
             .padding(.horizontal)
-            }
             .onAppear{
                 print(favProduct.title)
             }

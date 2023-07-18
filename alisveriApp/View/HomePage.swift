@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomePage: View {
-    @ObservedObject var homeViewModel = HomePageViewModel()
+    @StateObject var homeViewModel: HomePageViewModel
     @State private var status = false
     @State private var selectedProduct: Product?
     @State private var showFavorites = false
@@ -40,17 +40,17 @@ struct HomePage: View {
                
     }
         .edgesIgnoringSafeArea(.top)
-        .sheet(item: $selectedProduct, onDismiss: {
-            showFavorites = true
-        }) { product in
+        .sheet(item: $selectedProduct) { product in
+                
             ProductDetail(homeViewModel: homeViewModel, product: product)
         }
+        
         
     }
 }
 
 struct BirinciViewController_Previews: PreviewProvider {
     static var previews: some View {
-        HomePage()
+        HomePage(homeViewModel: HomePageViewModel())
     }
 }
