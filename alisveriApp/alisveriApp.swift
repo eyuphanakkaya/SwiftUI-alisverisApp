@@ -13,7 +13,7 @@ struct alisveriApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SplashScreen()
                 .preferredColorScheme(isMode ? .dark : .light)
         }
     }

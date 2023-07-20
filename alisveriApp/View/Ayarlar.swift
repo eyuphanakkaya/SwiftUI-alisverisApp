@@ -19,9 +19,6 @@ struct Ayarlar: View {
             .navigationTitle("Ayarlar")
          }
         .preferredColorScheme(isMode ? .dark : .light)
-        
-       
-
     }
 }
 struct UcuncuViewController_Previews: PreviewProvider {

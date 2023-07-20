@@ -23,11 +23,17 @@ struct ContentView: View {
                             Image(systemName: "heart")
                             Text("Favoriler")
                         }
+                Shopping(homePageViewModel: homeViewModel)
+                    .tabItem {
+                        Image(systemName: "basket")
+                        Text("Sepet")
+                    }
                 Ayarlar(homePageViewModel: homeViewModel)
                         .tabItem {
                             Image(systemName: "gear")
                             Text("Ayarlar")
                         }
+
                 }
            
         }

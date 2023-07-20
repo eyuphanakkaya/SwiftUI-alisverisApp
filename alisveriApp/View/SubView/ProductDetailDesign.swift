@@ -10,6 +10,7 @@ import Kingfisher
 
 struct ProductDetailDesign: View {
     var productDetail: Product
+    @State var showAlert = false
 
     @StateObject var homePageViewModel: HomePageViewModel
     var body: some View {
@@ -55,15 +56,28 @@ struct ProductDetailDesign: View {
                     .border(.gray)
                     .cornerRadius(20)
                     
-                    Button(action: {
-                        print("Sepete eklendi")
-                    }) {
+                    Button {
+                        showAlert = true
+                    } label: {
                         HStack {
                             
-                            Text("Add Bag")
+                            Text("Add Basket")
                             Image(systemName: "bag")
                         }
-                        
+                    }
+                    .alert(isPresented: $showAlert){
+                        Alert(title: Text("Bilgilendirme"),
+                        message: Text("Ürün Sepete Eklensin Mi?"),
+                        primaryButton: .destructive(Text("İptal")),
+                              secondaryButton: .cancel(Text("Tamam")) {
+                            if !homePageViewModel.basket.contains {$0.id == productDetail.id}  {
+                                homePageViewModel.basket.append(productDetail)
+                            } else {
+                               print("Bu ürün zaten var")
+                            }
+                        }
+                              
+                        )
                     }
                     .frame(width: 350,height: 60)
                     .background(Color.black)
@@ -84,7 +98,6 @@ struct ProductDetailDesign: View {
                     } label: {
                         HStack {
                             Text("Favoriler")
-                            
                             Image(systemName: homePageViewModel.favourites.contains { $0.id == productDetail.id } ? "heart.fill":"heart")
                         }
                     }
