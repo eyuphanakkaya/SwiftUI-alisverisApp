@@ -14,7 +14,9 @@ struct ShoppingDesing: View {
     var body: some View {
         HStack(spacing: 20) {
             Text(product.title)
+                .foregroundColor(Color("renk1"))
             Text("\(product.price ?? 0) $")
+                .foregroundColor(Color("renk1"))
         }
     }
 }

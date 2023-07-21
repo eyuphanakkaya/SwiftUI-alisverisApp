@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct HomePage: View {
-    @StateObject var homeViewModel: HomePageViewModel
-    @State private var status = false
+    @ObservedObject var homeViewModel: HomePageViewModel
+    @State private var status = true
     @State private var selectedProduct: Product?
     @State private var showFavorites = false
     
@@ -22,7 +22,6 @@ struct HomePage: View {
                     ForEach(homeViewModel.productList,id: \.self){ product in
                         HomeDesign(product: product)
                             .onTapGesture {
-                                status = true
                                 selectedProduct = product
                             }
                             .padding(.vertical,120)
@@ -30,6 +29,37 @@ struct HomePage: View {
                     }
                 }
                 .navigationTitle("Ürünler")
+                .toolbar {
+                    ToolbarItem {
+                        Menu {
+                            Button {
+                                if status {
+                                    homeViewModel.productList.sort{$0.title<$1.title}
+                                }
+                               
+                                print("A'dan Z'ye sıralandı")
+                            } label: {
+                                Text("A'dan Z'ye")
+                            }
+                            Button {
+                                homeViewModel.productList.sort{ $0.price > $1.price}
+                                print("Azalan fiyat")
+                            } label: {
+                                Text("Azalan fiyat")
+                            }
+                            Button {
+                                homeViewModel.productList.sort{ $0.price < $1.price}
+                                print("Artan fiyat")
+                            } label: {
+                                Text("Artan fiyat")
+                            }
+                        } label: {
+                            Image(systemName: "menucard")
+                        }
+
+                    }
+
+                }
             }
            
             .onAppear{

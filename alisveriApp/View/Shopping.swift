@@ -19,14 +19,16 @@ struct Shopping: View {
                 Text("Toplam Tutar = \(topla) $")
                     .foregroundColor(.red)
             }
+            .navigationTitle("Sepetim")
             .foregroundColor(.black)
             .onAppear {
+              
                 topla = homePageViewModel.basket.reduce(0) { $0 + ($1.price ?? 0) }
             }
         }
            
             
-            .navigationTitle("Sepetim")
+            
             
         }
         
