@@ -1,5 +1,5 @@
 # alisverisApp
-Web Servis üzerinden çekilen verileri anasayfada listeyen ve sepete ekleme favorilere ekleme gibi aksiyonların bulunduğu ve MVVM design patternin kullanıldığı bir uygulama.
+SwiftUI ile web Servis üzerinden çekilen verileri anasayfada listeyen ve sepete ekleme favorilere ekleme gibi aksiyonların bulunduğu ve MVVM design patternin kullanıldığı bir uygulama.
 
 
 
